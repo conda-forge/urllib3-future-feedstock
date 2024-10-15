@@ -1,5 +1,5 @@
 {% set name = "urllib3-future" %}
-{% set version = "2.9.900" %}
+{% set version = "2.10.905" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/urllib3_future-{{ version }}.tar.gz
-  sha256: 5e126c7f6b900c6d07d0853ce032bc256b8b6cdee3b42b1c92f45cb3585a45d9
+  sha256: b4955f1ccea20f76a762cec2d1800148256f9fe5fe057987f90de733c3afe48d
 
 build:
   noarch: python
