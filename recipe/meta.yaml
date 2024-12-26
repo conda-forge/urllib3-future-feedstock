@@ -12,15 +12,15 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - hatchling >=1.6.0,<2
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - qh3 >=1.0.3,<2.0.0
     - h11 >=0.11.0,<1.0.0
     - jh2 >=5.0.3,<6.0.0
@@ -32,6 +32,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/jawah/urllib3.future
