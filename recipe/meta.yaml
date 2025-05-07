@@ -1,5 +1,5 @@
 {% set name = "urllib3-future" %}
-{% set version = "2.9.900" %}
+{% set version = "2.12.920" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - qh3 >=1.0.3,<2.0.0
+    - qh3 >=1.2.0,<2.0.0
     - h11 >=0.11.0,<1.0.0
     - jh2 >=5.0.3,<6.0.0
 
@@ -43,3 +43,4 @@ about:
 extra:
   recipe-maintainers:
     - rxm7706
+    - jan-janssen
