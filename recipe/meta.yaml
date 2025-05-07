@@ -1,5 +1,5 @@
 {% set name = "urllib3-future" %}
-{% set version = "2.9.900" %}
+{% set version = "2.12.920" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/urllib3_future-{{ version }}.tar.gz
-  sha256: 5e126c7f6b900c6d07d0853ce032bc256b8b6cdee3b42b1c92f45cb3585a45d9
+  sha256: 642b235a89cbddb7a3c6703a11fd0255473231be791214fd01abd465371ea8fb
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - qh3 >=1.0.3,<2.0.0
+    - qh3 >=1.2.0,<2.0.0
     - h11 >=0.11.0,<1.0.0
     - jh2 >=5.0.3,<6.0.0
 
@@ -43,3 +43,4 @@ about:
 extra:
   recipe-maintainers:
     - rxm7706
+    - jan-janssen
