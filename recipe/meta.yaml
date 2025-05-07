@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/urllib3_future-{{ version }}.tar.gz
-  sha256: 5e126c7f6b900c6d07d0853ce032bc256b8b6cdee3b42b1c92f45cb3585a45d9
+  sha256: 642b235a89cbddb7a3c6703a11fd0255473231be791214fd01abd465371ea8fb
 
 build:
   noarch: python
