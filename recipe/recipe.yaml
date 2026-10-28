@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: urllib3-future
-  version: "2.25.904"
+  version: "2.25.905"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/urllib3_future-${{ version }}.tar.gz
-  sha256: 2ea5bcd64433e6d05ff1684a3cef51e94f33506f08e8fed344108d2abd0f416b
+  sha256: d5bd25dad01d7358b33f4c7b3f225506231158086ff790028c1de5b38c26e89e
 
 build:
   number: 0
