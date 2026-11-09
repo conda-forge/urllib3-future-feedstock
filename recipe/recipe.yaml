@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: urllib3-future
-  version: "2.25.905"
+  version: "2.25.906"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/urllib3_future-${{ version }}.tar.gz
-  sha256: d5bd25dad01d7358b33f4c7b3f225506231158086ff790028c1de5b38c26e89e
+  sha256: cc8d4e1151c8cf71d184696e358acd339d6a6092b1d23bcd73d3b8e3a6cc26e4
 
 build:
   number: 0
@@ -33,7 +33,9 @@ tests:
       imports:
         - urllib3_future
       pip_check: true
-      python_version: ${{ python_min }}
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: urllib3.future is a powerful HTTP 1.1, 2, and 3 client with both sync and async interfaces
